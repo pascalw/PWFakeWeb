@@ -1,0 +1,13 @@
+*.mode1v3
+*.mode2v3
+*.pbxuser
+build/
+project.xcworkspace/
+xcuserdata/
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db

@@ -1,0 +1,6 @@
+[submodule "lib/kiwi"]
+	path = lib/kiwi
+	url = https://github.com/allending/Kiwi.git
+[submodule "lib/asihttprequest"]
+	path = lib/asihttprequest
+	url = https://github.com/pokeb/asi-http-request.git

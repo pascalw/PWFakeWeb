@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PWFakeWeb' target in the 'PWFakeWeb' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif

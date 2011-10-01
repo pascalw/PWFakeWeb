@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		507061E61436483E00514A88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507061E51436483E00514A88 /* Foundation.framework */; };
+		507061EC1436483E00514A88 /* PWFakeWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 507061EB1436483E00514A88 /* PWFakeWeb.m */; };
+		507061F41436483E00514A88 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507061F31436483E00514A88 /* SenTestingKit.framework */; };
+		507061F71436483E00514A88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507061E51436483E00514A88 /* Foundation.framework */; };
+		5070624E14364BB500514A88 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070624714364BAB00514A88 /* libKiwi.a */; };
+		5070625014364BE200514A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070624F14364BE200514A88 /* UIKit.framework */; };
+		507062701436518F00514A88 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070626F1436518F00514A88 /* CFNetwork.framework */; };
+		507062721436519800514A88 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507062711436519800514A88 /* SystemConfiguration.framework */; };
+		507062741436519E00514A88 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507062731436519E00514A88 /* MobileCoreServices.framework */; };
+		50706276143651A700514A88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50706275143651A700514A88 /* CoreGraphics.framework */; };
+		50706278143651AD00514A88 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50706277143651AD00514A88 /* libz.dylib */; };
+		5070628E1436525E00514A88 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5070627A1436525E00514A88 /* ASIAuthenticationDialog.h */; };
+		5070628F1436525E00514A88 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070627B1436525E00514A88 /* ASIAuthenticationDialog.m */; };
+		507062911436525E00514A88 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5070627C1436525E00514A88 /* ASICacheDelegate.h */; };
+		507062921436525E00514A88 /* ASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5070627D1436525E00514A88 /* ASIDataCompressor.h */; };
+		507062931436525E00514A88 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070627E1436525E00514A88 /* ASIDataCompressor.m */; };
+		507062951436525E00514A88 /* ASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5070627F1436525E00514A88 /* ASIDataDecompressor.h */; };
+		507062961436525E00514A88 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 507062801436525E00514A88 /* ASIDataDecompressor.m */; };
+		507062981436525E00514A88 /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 507062811436525E00514A88 /* ASIDownloadCache.h */; };
+		507062991436525E00514A88 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 507062821436525E00514A88 /* ASIDownloadCache.m */; };
+		5070629B1436525E00514A88 /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 507062831436525E00514A88 /* ASIFormDataRequest.h */; };
+		5070629C1436525E00514A88 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 507062841436525E00514A88 /* ASIFormDataRequest.m */; };
+		5070629E1436525E00514A88 /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 507062851436525E00514A88 /* ASIHTTPRequest.h */; };
+		5070629F1436525E00514A88 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 507062861436525E00514A88 /* ASIHTTPRequest.m */; };
+		507062A11436525E00514A88 /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 507062871436525E00514A88 /* ASIHTTPRequestConfig.h */; };
+		507062A21436525E00514A88 /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 507062881436525E00514A88 /* ASIHTTPRequestDelegate.h */; };
+		507062A31436525E00514A88 /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 507062891436525E00514A88 /* ASIInputStream.h */; };
+		507062A41436525E00514A88 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070628A1436525E00514A88 /* ASIInputStream.m */; };
+		507062A61436525E00514A88 /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5070628B1436525E00514A88 /* ASINetworkQueue.h */; };
+		507062A71436525E00514A88 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070628C1436525E00514A88 /* ASINetworkQueue.m */; };
+		507062A91436525E00514A88 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5070628D1436525E00514A88 /* ASIProgressDelegate.h */; };
+		507062AC1436527D00514A88 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 507062AA1436527D00514A88 /* Reachability.h */; };
+		507062AD1436527D00514A88 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 507062AB1436527D00514A88 /* Reachability.m */; };
+		507062AF143652BD00514A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070624F14364BE200514A88 /* UIKit.framework */; };
+		507062B0143652BF00514A88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50706275143651A700514A88 /* CoreGraphics.framework */; };
+		507062B1143652BF00514A88 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507062731436519E00514A88 /* MobileCoreServices.framework */; };
+		507062B2143652BF00514A88 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507062711436519800514A88 /* SystemConfiguration.framework */; };
+		507062B3143652BF00514A88 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070626F1436518F00514A88 /* CFNetwork.framework */; };
+		507062B41436533C00514A88 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50706277143651AD00514A88 /* libz.dylib */; };
+		507062B614365AC100514A88 /* PWFakeWebSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 507062B514365AC100514A88 /* PWFakeWebSpec.m */; };
+		50C202A31437347F0070F97E /* libPWFakeWeb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507061E21436483E00514A88 /* libPWFakeWeb.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5070624614364BAB00514A88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5070623D14364BAB00514A88 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015B9F11583A77002E9A98;
+			remoteInfo = Kiwi;
+		};
+		5070624814364BAB00514A88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5070623D14364BAB00514A88 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015C9E11584017002E9A98;
+			remoteInfo = KiwiTests;
+		};
+		5070624A14364BAB00514A88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5070623D14364BAB00514A88 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3B16542139967B800E9CC6E;
+			remoteInfo = KiwiExamples;
+		};
+		5070624C14364BAF00514A88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5070623D14364BAB00514A88 /* Kiwi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F5015B9E11583A77002E9A98;
+			remoteInfo = Kiwi;
+		};
+		50C202A41437349A0070F97E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 507061D91436483E00514A88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507061E11436483E00514A88;
+			remoteInfo = PWFakeWeb;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		507061E21436483E00514A88 /* libPWFakeWeb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPWFakeWeb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		507061E51436483E00514A88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		507061E91436483E00514A88 /* PWFakeWeb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PWFakeWeb-Prefix.pch"; sourceTree = "<group>"; };
+		507061EA1436483E00514A88 /* PWFakeWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWFakeWeb.h; sourceTree = "<group>"; };
+		507061EB1436483E00514A88 /* PWFakeWeb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWFakeWeb.m; sourceTree = "<group>"; };
+		507061F21436483E00514A88 /* PWFakeWebSpecs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PWFakeWebSpecs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		507061F31436483E00514A88 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5070623D14364BAB00514A88 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
+		5070624F14364BE200514A88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5070626F1436518F00514A88 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		507062711436519800514A88 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		507062731436519E00514A88 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		50706275143651A700514A88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50706277143651AD00514A88 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5070627A1436525E00514A88 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = ../lib/asihttprequest/Classes/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		5070627B1436525E00514A88 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = ../lib/asihttprequest/Classes/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		5070627C1436525E00514A88 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = ../lib/asihttprequest/Classes/ASICacheDelegate.h; sourceTree = "<group>"; };
+		5070627D1436525E00514A88 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = ../lib/asihttprequest/Classes/ASIDataCompressor.h; sourceTree = "<group>"; };
+		5070627E1436525E00514A88 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = ../lib/asihttprequest/Classes/ASIDataCompressor.m; sourceTree = "<group>"; };
+		5070627F1436525E00514A88 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = ../lib/asihttprequest/Classes/ASIDataDecompressor.h; sourceTree = "<group>"; };
+		507062801436525E00514A88 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = ../lib/asihttprequest/Classes/ASIDataDecompressor.m; sourceTree = "<group>"; };
+		507062811436525E00514A88 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = ../lib/asihttprequest/Classes/ASIDownloadCache.h; sourceTree = "<group>"; };
+		507062821436525E00514A88 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = ../lib/asihttprequest/Classes/ASIDownloadCache.m; sourceTree = "<group>"; };
+		507062831436525E00514A88 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = ../lib/asihttprequest/Classes/ASIFormDataRequest.h; sourceTree = "<group>"; };
+		507062841436525E00514A88 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = ../lib/asihttprequest/Classes/ASIFormDataRequest.m; sourceTree = "<group>"; };
+		507062851436525E00514A88 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = ../lib/asihttprequest/Classes/ASIHTTPRequest.h; sourceTree = "<group>"; };
+		507062861436525E00514A88 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = ../lib/asihttprequest/Classes/ASIHTTPRequest.m; sourceTree = "<group>"; };
+		507062871436525E00514A88 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = ../lib/asihttprequest/Classes/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		507062881436525E00514A88 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = ../lib/asihttprequest/Classes/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		507062891436525E00514A88 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = ../lib/asihttprequest/Classes/ASIInputStream.h; sourceTree = "<group>"; };
+		5070628A1436525E00514A88 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = ../lib/asihttprequest/Classes/ASIInputStream.m; sourceTree = "<group>"; };
+		5070628B1436525E00514A88 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = ../lib/asihttprequest/Classes/ASINetworkQueue.h; sourceTree = "<group>"; };
+		5070628C1436525E00514A88 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = ../lib/asihttprequest/Classes/ASINetworkQueue.m; sourceTree = "<group>"; };
+		5070628D1436525E00514A88 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = ../lib/asihttprequest/Classes/ASIProgressDelegate.h; sourceTree = "<group>"; };
+		507062AA1436527D00514A88 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../lib/asihttprequest/External/Reachability/Reachability.h; sourceTree = "<group>"; };
+		507062AB1436527D00514A88 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../lib/asihttprequest/External/Reachability/Reachability.m; sourceTree = "<group>"; };
+		507062B514365AC100514A88 /* PWFakeWebSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWFakeWebSpec.m; path = PWFakeWebSpecs/PWFakeWebSpec.m; sourceTree = SOURCE_ROOT; };
+		507062C314365BA300514A88 /* PWFakeWebSpecs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PWFakeWebSpecs-Info.plist"; path = "PWFakeWebSpecs/PWFakeWebSpecs-Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		507061DF1436483E00514A88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50706278143651AD00514A88 /* libz.dylib in Frameworks */,
+				50706276143651A700514A88 /* CoreGraphics.framework in Frameworks */,
+				507062741436519E00514A88 /* MobileCoreServices.framework in Frameworks */,
+				507062721436519800514A88 /* SystemConfiguration.framework in Frameworks */,
+				507062701436518F00514A88 /* CFNetwork.framework in Frameworks */,
+				507061E61436483E00514A88 /* Foundation.framework in Frameworks */,
+				507062AF143652BD00514A88 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507061EE1436483E00514A88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C202A31437347F0070F97E /* libPWFakeWeb.a in Frameworks */,
+				5070625014364BE200514A88 /* UIKit.framework in Frameworks */,
+				5070624E14364BB500514A88 /* libKiwi.a in Frameworks */,
+				507061F41436483E00514A88 /* SenTestingKit.framework in Frameworks */,
+				507061F71436483E00514A88 /* Foundation.framework in Frameworks */,
+				507062B0143652BF00514A88 /* CoreGraphics.framework in Frameworks */,
+				507062B1143652BF00514A88 /* MobileCoreServices.framework in Frameworks */,
+				507062B2143652BF00514A88 /* SystemConfiguration.framework in Frameworks */,
+				507062B3143652BF00514A88 /* CFNetwork.framework in Frameworks */,
+				507062B41436533C00514A88 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		507061D71436483E00514A88 = {
+			isa = PBXGroup;
+			children = (
+				507061E71436483E00514A88 /* PWFakeWeb */,
+				507061FD1436483E00514A88 /* PWFakeWebTests */,
+				507061E41436483E00514A88 /* Frameworks */,
+				507061E31436483E00514A88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		507061E31436483E00514A88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				507061E21436483E00514A88 /* libPWFakeWeb.a */,
+				507061F21436483E00514A88 /* PWFakeWebSpecs.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		507061E41436483E00514A88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				507062791436523F00514A88 /* ASIHTTPRequest */,
+				5070623D14364BAB00514A88 /* Kiwi.xcodeproj */,
+				50706277143651AD00514A88 /* libz.dylib */,
+				50706275143651A700514A88 /* CoreGraphics.framework */,
+				507062731436519E00514A88 /* MobileCoreServices.framework */,
+				507062711436519800514A88 /* SystemConfiguration.framework */,
+				5070626F1436518F00514A88 /* CFNetwork.framework */,
+				5070624F14364BE200514A88 /* UIKit.framework */,
+				507061E51436483E00514A88 /* Foundation.framework */,
+				507061F31436483E00514A88 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		507061E71436483E00514A88 /* PWFakeWeb */ = {
+			isa = PBXGroup;
+			children = (
+				507061EA1436483E00514A88 /* PWFakeWeb.h */,
+				507061EB1436483E00514A88 /* PWFakeWeb.m */,
+				507061E81436483E00514A88 /* Supporting Files */,
+			);
+			path = PWFakeWeb;
+			sourceTree = "<group>";
+		};
+		507061E81436483E00514A88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				507061E91436483E00514A88 /* PWFakeWeb-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		507061FD1436483E00514A88 /* PWFakeWebTests */ = {
+			isa = PBXGroup;
+			children = (
+				507062B514365AC100514A88 /* PWFakeWebSpec.m */,
+				507061FE1436483E00514A88 /* Supporting Files */,
+			);
+			path = PWFakeWebTests;
+			sourceTree = "<group>";
+		};
+		507061FE1436483E00514A88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				507062C314365BA300514A88 /* PWFakeWebSpecs-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5070623E14364BAB00514A88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5070624714364BAB00514A88 /* libKiwi.a */,
+				5070624914364BAB00514A88 /* KiwiTests.octest */,
+				5070624B14364BAB00514A88 /* KiwiExamples.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		507062791436523F00514A88 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				507062AA1436527D00514A88 /* Reachability.h */,
+				507062AB1436527D00514A88 /* Reachability.m */,
+				5070627A1436525E00514A88 /* ASIAuthenticationDialog.h */,
+				5070627B1436525E00514A88 /* ASIAuthenticationDialog.m */,
+				5070627C1436525E00514A88 /* ASICacheDelegate.h */,
+				5070627D1436525E00514A88 /* ASIDataCompressor.h */,
+				5070627E1436525E00514A88 /* ASIDataCompressor.m */,
+				5070627F1436525E00514A88 /* ASIDataDecompressor.h */,
+				507062801436525E00514A88 /* ASIDataDecompressor.m */,
+				507062811436525E00514A88 /* ASIDownloadCache.h */,
+				507062821436525E00514A88 /* ASIDownloadCache.m */,
+				507062831436525E00514A88 /* ASIFormDataRequest.h */,
+				507062841436525E00514A88 /* ASIFormDataRequest.m */,
+				507062851436525E00514A88 /* ASIHTTPRequest.h */,
+				507062861436525E00514A88 /* ASIHTTPRequest.m */,
+				507062871436525E00514A88 /* ASIHTTPRequestConfig.h */,
+				507062881436525E00514A88 /* ASIHTTPRequestDelegate.h */,
+				507062891436525E00514A88 /* ASIInputStream.h */,
+				5070628A1436525E00514A88 /* ASIInputStream.m */,
+				5070628B1436525E00514A88 /* ASINetworkQueue.h */,
+				5070628C1436525E00514A88 /* ASINetworkQueue.m */,
+				5070628D1436525E00514A88 /* ASIProgressDelegate.h */,
+			);
+			name = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		507061E01436483E00514A88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5070628E1436525E00514A88 /* ASIAuthenticationDialog.h in Headers */,
+				507062911436525E00514A88 /* ASICacheDelegate.h in Headers */,
+				507062921436525E00514A88 /* ASIDataCompressor.h in Headers */,
+				507062951436525E00514A88 /* ASIDataDecompressor.h in Headers */,
+				507062981436525E00514A88 /* ASIDownloadCache.h in Headers */,
+				5070629B1436525E00514A88 /* ASIFormDataRequest.h in Headers */,
+				5070629E1436525E00514A88 /* ASIHTTPRequest.h in Headers */,
+				507062A11436525E00514A88 /* ASIHTTPRequestConfig.h in Headers */,
+				507062A21436525E00514A88 /* ASIHTTPRequestDelegate.h in Headers */,
+				507062A31436525E00514A88 /* ASIInputStream.h in Headers */,
+				507062A61436525E00514A88 /* ASINetworkQueue.h in Headers */,
+				507062A91436525E00514A88 /* ASIProgressDelegate.h in Headers */,
+				507062AC1436527D00514A88 /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		507061E11436483E00514A88 /* PWFakeWeb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507062091436483E00514A88 /* Build configuration list for PBXNativeTarget "PWFakeWeb" */;
+			buildPhases = (
+				507061DE1436483E00514A88 /* Sources */,
+				507061DF1436483E00514A88 /* Frameworks */,
+				507061E01436483E00514A88 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PWFakeWeb;
+			productName = PWFakeWeb;
+			productReference = 507061E21436483E00514A88 /* libPWFakeWeb.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		507061F11436483E00514A88 /* PWFakeWebSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5070620C1436483E00514A88 /* Build configuration list for PBXNativeTarget "PWFakeWebSpecs" */;
+			buildPhases = (
+				507061ED1436483E00514A88 /* Sources */,
+				507061EE1436483E00514A88 /* Frameworks */,
+				507061EF1436483E00514A88 /* Resources */,
+				507061F01436483E00514A88 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50C202A51437349A0070F97E /* PBXTargetDependency */,
+				5070624D14364BAF00514A88 /* PBXTargetDependency */,
+			);
+			name = PWFakeWebSpecs;
+			productName = PWFakeWebTests;
+			productReference = 507061F21436483E00514A88 /* PWFakeWebSpecs.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		507061D91436483E00514A88 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 507061DC1436483E00514A88 /* Build configuration list for PBXProject "PWFakeWeb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 507061D71436483E00514A88;
+			productRefGroup = 507061E31436483E00514A88 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5070623E14364BAB00514A88 /* Products */;
+					ProjectRef = 5070623D14364BAB00514A88 /* Kiwi.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				507061E11436483E00514A88 /* PWFakeWeb */,
+				507061F11436483E00514A88 /* PWFakeWebSpecs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5070624714364BAB00514A88 /* libKiwi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKiwi.a;
+			remoteRef = 5070624614364BAB00514A88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5070624914364BAB00514A88 /* KiwiTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiTests.octest;
+			remoteRef = 5070624814364BAB00514A88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5070624B14364BAB00514A88 /* KiwiExamples.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiExamples.octest;
+			remoteRef = 5070624A14364BAB00514A88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		507061EF1436483E00514A88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		507061F01436483E00514A88 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		507061DE1436483E00514A88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507061EC1436483E00514A88 /* PWFakeWeb.m in Sources */,
+				5070628F1436525E00514A88 /* ASIAuthenticationDialog.m in Sources */,
+				507062931436525E00514A88 /* ASIDataCompressor.m in Sources */,
+				507062961436525E00514A88 /* ASIDataDecompressor.m in Sources */,
+				507062991436525E00514A88 /* ASIDownloadCache.m in Sources */,
+				5070629C1436525E00514A88 /* ASIFormDataRequest.m in Sources */,
+				5070629F1436525E00514A88 /* ASIHTTPRequest.m in Sources */,
+				507062A41436525E00514A88 /* ASIInputStream.m in Sources */,
+				507062A71436525E00514A88 /* ASINetworkQueue.m in Sources */,
+				507062AD1436527D00514A88 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507061ED1436483E00514A88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507062B614365AC100514A88 /* PWFakeWebSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5070624D14364BAF00514A88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kiwi;
+			targetProxy = 5070624C14364BAF00514A88 /* PBXContainerItemProxy */;
+		};
+		50C202A51437349A0070F97E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 507061E11436483E00514A88 /* PWFakeWeb */;
+			targetProxy = 50C202A41437349A0070F97E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		507062071436483E00514A88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		507062081436483E00514A88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5070620A1436483E00514A88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PWFakeWeb.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PWFakeWeb/PWFakeWeb-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5070620B1436483E00514A88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PWFakeWeb.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PWFakeWeb/PWFakeWeb-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5070620D1436483E00514A88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PWFakeWeb/PWFakeWeb-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "PWFakeWebSpecs/PWFakeWebSpecs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../lib/kiwi/Kiwi/;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5070620E1436483E00514A88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PWFakeWeb/PWFakeWeb-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "PWFakeWebSpecs/PWFakeWebSpecs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../lib/kiwi/Kiwi/;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		507061DC1436483E00514A88 /* Build configuration list for PBXProject "PWFakeWeb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507062071436483E00514A88 /* Debug */,
+				507062081436483E00514A88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507062091436483E00514A88 /* Build configuration list for PBXNativeTarget "PWFakeWeb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5070620A1436483E00514A88 /* Debug */,
+				5070620B1436483E00514A88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5070620C1436483E00514A88 /* Build configuration list for PBXNativeTarget "PWFakeWebSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5070620D1436483E00514A88 /* Debug */,
+				5070620E1436483E00514A88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 507061D91436483E00514A88 /* Project object */;
+}
