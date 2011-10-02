@@ -56,6 +56,10 @@ void Swizzle(Class c, SEL orig, SEL new);
 	[overrides setValue: value forKey: key];
 }
 
++ (void) registerURI: (NSString *) uri method: (NSString *) method body: (NSString *) body {
+	[self registerURI: uri method: method body: body status: 200];
+}
+
 + (NSString *) keyForURI: (NSString *) uri method: (NSString *) method {
 	return [NSString stringWithFormat: @"%@ %@", method, uri];
 }
