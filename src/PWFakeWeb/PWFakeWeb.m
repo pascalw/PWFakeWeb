@@ -7,57 +7,32 @@
 //
 
 #import "PWFakeWeb.h"
-#import "ASIHTTPRequest.h"
+#import "PWFakeWeb+private.h"
 #import <objc/runtime.h> 
 #import <objc/message.h>
 
-#define KEY_BODY @"body"
-#define KEY_STATUS @"status"
-
 NSString * const PWFakeWebRequestKey = @"PWFakeWebRequestKey";
 NSString * const PWFakeWebNetConnectNotAllowedException = @"PWFakeWebNetConnectNotAllowedException";
+NSString * const PWFakeWebRequestBodyKey = @"PWFakeWebRequestBodyKey";
+NSString * const PWFakeWebRequestStatusKey = @"PWFakeWebRequestStatusKey";
 
 static BOOL allowNetConnect;
 static NSMutableDictionary *overrides;
 
-void Swizzle(Class c, SEL orig, SEL new);
-
 @interface PWFakeWeb ()
 
 + (NSString *) keyForURI: (NSString *) uri method: (NSString *) method;
++ (void) raiseNetConnectExceptionForURI: (NSURL *) uri method: (NSString *) method;
 
 @end
 
 @implementation PWFakeWeb
 
+#pragma mark - internal
+
 + (void) initialize {
 	overrides = [NSMutableDictionary new];
-	
-	Class c = [ASIHTTPRequest class];
-	Swizzle(c, @selector(startSynchronous), @selector(override_startSynchronous));
-	Swizzle(c, @selector(responseString), @selector(override_responseString));
-	Swizzle(c, @selector(responseStatusCode), @selector(override_responseStatusCode));
-	Swizzle(c, @selector(startAsynchronous), @selector(override_startAsynchronous));
-	
 	allowNetConnect = YES;
-}
-
-+ (void) setAllowNetConnect: (BOOL) netConnect {
-	allowNetConnect = netConnect;
-}
-
-+ (void) registerURI: (NSString *) uri method: (NSString *) method body: (NSString *) body status: (int) status {
-	NSString *key = [self keyForURI: uri method: method];
-	NSDictionary *value = [NSDictionary dictionaryWithObjectsAndKeys: 
-						   body, KEY_BODY,
-						   [NSNumber numberWithInt: status], KEY_STATUS
-						   , nil];
-	
-	[overrides setValue: value forKey: key];
-}
-
-+ (void) registerURI: (NSString *) uri method: (NSString *) method body: (NSString *) body {
-	[self registerURI: uri method: method body: body status: 200];
 }
 
 + (NSString *) keyForURI: (NSString *) uri method: (NSString *) method {
@@ -70,7 +45,7 @@ void Swizzle(Class c, SEL orig, SEL new);
 	for(NSString *key in overrides)
 	{
 		NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern: key
-										options: NSRegularExpressionCaseInsensitive error: nil];
+																			   options: NSRegularExpressionCaseInsensitive error: nil];
 		
 		if([regex numberOfMatchesInString: matchAgainst options: 0 range: NSMakeRange(0, [matchAgainst length])] > 0)
 		{
@@ -78,11 +53,12 @@ void Swizzle(Class c, SEL orig, SEL new);
 		}
 	}
 	
+	if(! [self allowsNetConnect])
+	{
+		[self raiseNetConnectExceptionForURI: uri method: method];
+	}
+	
 	return nil;
-}
-
-+ (void) clearRegistry {
-	[overrides removeAllObjects];
 }
 
 + (void) raiseNetConnectExceptionForURI: (NSURL *) uri method: (NSString *) method {
@@ -91,78 +67,33 @@ void Swizzle(Class c, SEL orig, SEL new);
 	@throw [NSException exceptionWithName: PWFakeWebNetConnectNotAllowedException reason: PWFakeWebNetConnectNotAllowedException userInfo: userInfo];
 }
 
-@end
+#pragma mark - public
 
-@implementation ASIHTTPRequest (fakeweb)
-
-- (NSURL *) URIForOverride {
-	return self.originalURL ? self.originalURL : self.url;
++ (void) setAllowNetConnect: (BOOL) netConnect {
+	allowNetConnect = netConnect;
 }
 
-- (void) override_startSynchronous {
-	if(! [PWFakeWeb overrideForURI: [self URIForOverride] method: self.requestMethod])
-	{
-		if(! allowNetConnect)
-		{
-			[PWFakeWeb raiseNetConnectExceptionForURI: [self URIForOverride] method: self.requestMethod];
-		}
-		else
-		{
-			return [self override_startSynchronous]; //call original implementation
-		}
-	}
-	else
-	{
-		//just do nothing
-	}
++ (BOOL) allowsNetConnect {
+	return allowNetConnect;
 }
 
-- (void) override_startAsynchronous {
-	if(! [PWFakeWeb overrideForURI: [self URIForOverride] method: self.requestMethod])
-	{
-		if(! allowNetConnect)
-		{
-			[PWFakeWeb raiseNetConnectExceptionForURI: [self URIForOverride] method: self.requestMethod];
-		}
-		else
-		{
-			return [self override_startAsynchronous]; //call original implementation
-		}
-	}
-	else
-	{
-		//basically just do nothing again, just call the completionBlock after a small async delay
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * 1e9), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-			dispatch_async( dispatch_get_main_queue(), ^{
-				completionBlock();
-			});
-		});
-	}
-}
-
-- (NSString *) override_responseString {
-	NSDictionary *override = [PWFakeWeb overrideForURI: [self URIForOverride] method: self.requestMethod];
-	if(override)
-	{
-		return [override objectForKey: KEY_BODY];
-	}
-	else
-	{
-		return [self override_responseString]; //call original implementation
-	}
-}
-
-- (int) override_responseStatusCode {
-	NSDictionary *override = [PWFakeWeb overrideForURI: [self URIForOverride] method: self.requestMethod];
++ (void) registerURI: (NSString *) uri method: (NSString *) method body: (NSString *) body status: (int) status {
+	NSString *key = [self keyForURI: uri method: method];
+	NSDictionary *value = [NSDictionary dictionaryWithObjectsAndKeys: 
+						   body, PWFakeWebRequestBodyKey,
+						   [NSNumber numberWithInt: status], PWFakeWebRequestStatusKey
+						   , nil];
 	
-	if(override)
-	{
-		return [[override objectForKey: KEY_STATUS] intValue];
-	}
-	else
-	{
-		return [self override_responseStatusCode];
-	}
+	[overrides setValue: value forKey: key];
+}
+
++ (void) registerURI: (NSString *) uri method: (NSString *) method body: (NSString *) body {
+	[self registerURI: uri method: method body: body status: 200];
+}
+
+
++ (void) clearRegistry {
+	[overrides removeAllObjects];
 }
 
 @end

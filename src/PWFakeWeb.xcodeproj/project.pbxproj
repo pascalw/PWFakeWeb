@@ -48,6 +48,9 @@
 		50C203E21437A0910070F97E /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 507062861436525E00514A88 /* ASIHTTPRequest.m */; };
 		50C203E31437A0910070F97E /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070628A1436525E00514A88 /* ASIInputStream.m */; };
 		50C203E41437A0910070F97E /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070628C1436525E00514A88 /* ASINetworkQueue.m */; };
+		50C203EC1438E3990070F97E /* ASIHTTPRequest+fakweb.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C203EA1438E3990070F97E /* ASIHTTPRequest+fakweb.h */; };
+		50C203ED1438E3990070F97E /* ASIHTTPRequest+fakweb.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C203EB1438E3990070F97E /* ASIHTTPRequest+fakweb.m */; };
+		50C203EF1438E42F0070F97E /* PWFakeWeb+private.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C203EE1438E42F0070F97E /* PWFakeWeb+private.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +130,9 @@
 		507062AB1436527D00514A88 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../lib/asihttprequest/External/Reachability/Reachability.m; sourceTree = "<group>"; };
 		507062B514365AC100514A88 /* PWFakeWebSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWFakeWebSpec.m; path = PWFakeWebSpecs/PWFakeWebSpec.m; sourceTree = SOURCE_ROOT; };
 		507062C314365BA300514A88 /* PWFakeWebSpecs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PWFakeWebSpecs-Info.plist"; path = "PWFakeWebSpecs/PWFakeWebSpecs-Info.plist"; sourceTree = SOURCE_ROOT; };
+		50C203EA1438E3990070F97E /* ASIHTTPRequest+fakweb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASIHTTPRequest+fakweb.h"; sourceTree = "<group>"; };
+		50C203EB1438E3990070F97E /* ASIHTTPRequest+fakweb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ASIHTTPRequest+fakweb.m"; sourceTree = "<group>"; };
+		50C203EE1438E42F0070F97E /* PWFakeWeb+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PWFakeWeb+private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,9 @@
 		507061E71436483E00514A88 /* PWFakeWeb */ = {
 			isa = PBXGroup;
 			children = (
+				50C203EA1438E3990070F97E /* ASIHTTPRequest+fakweb.h */,
+				50C203EB1438E3990070F97E /* ASIHTTPRequest+fakweb.m */,
+				50C203EE1438E42F0070F97E /* PWFakeWeb+private.h */,
 				507061EA1436483E00514A88 /* PWFakeWeb.h */,
 				507061EB1436483E00514A88 /* PWFakeWeb.m */,
 				507061E81436483E00514A88 /* Supporting Files */,
@@ -294,6 +303,8 @@
 				507062A61436525E00514A88 /* ASINetworkQueue.h in Headers */,
 				507062A91436525E00514A88 /* ASIProgressDelegate.h in Headers */,
 				507062AC1436527D00514A88 /* Reachability.h in Headers */,
+				50C203EC1438E3990070F97E /* ASIHTTPRequest+fakweb.h in Headers */,
+				50C203EF1438E42F0070F97E /* PWFakeWeb+private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				507061EC1436483E00514A88 /* PWFakeWeb.m in Sources */,
+				50C203ED1438E3990070F97E /* ASIHTTPRequest+fakweb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

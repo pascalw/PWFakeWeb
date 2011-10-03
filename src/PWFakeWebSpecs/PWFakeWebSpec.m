@@ -8,8 +8,7 @@
 
 #define KIWI_DISABLE_MACRO_API
 #import "Kiwi.h"
-#import "PWFakeWeb.h"
-#import "ASIHTTPRequest.h"
+#import "ASIHTTPRequest+fakweb.h"
 
 SPEC_BEGIN(PWFakeWebSpec)
 

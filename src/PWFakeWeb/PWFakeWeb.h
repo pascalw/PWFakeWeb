@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const PWFakeWebRequestKey;
 extern NSString * const PWFakeWebNetConnectNotAllowedException;
 
 @interface PWFakeWeb : NSObject
 
 + (void) setAllowNetConnect: (BOOL) netConnect;
++ (BOOL) allowsNetConnect;
+
 + (void) registerURI: (NSString *) uri method: (NSString *) method body: (NSString *) body status: (int) status;
 + (void) registerURI: (NSString *) uri method: (NSString *) method body: (NSString *) body;
 + (void) clearRegistry;
