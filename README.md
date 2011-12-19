@@ -29,7 +29,7 @@ You can also match URIs with regular expressions, like so:
 
 And set status codes:
 
-		[PWFakeWeb registerURI: @"http://google.com" method: @"POST" body: @"" status: 500];
+  [PWFakeWeb registerURI: @"http://google.com" method: @"POST" body: @"" status: 500];
 
 	
 See the specs in `src/PWFakeWebSpecs/PWFakeWebSpec.m` for a full usage example.

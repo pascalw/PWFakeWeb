@@ -3,7 +3,7 @@
 //  PWFakeWeb
 //
 //  Created by Pascal Widdershoven on 02-10-11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Pascal Widdershoven. All rights reserved.
 //
 
 #import "ASIHTTPRequest+fakweb.h"

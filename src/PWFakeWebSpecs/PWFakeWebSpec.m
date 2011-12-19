@@ -3,7 +3,7 @@
 //  PWFakeWeb
 //
 //  Created by Pascal Widdershoven on 30-09-11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Pascal Widdershoven. All rights reserved.
 //
 
 #define KIWI_DISABLE_MACRO_API
